@@ -11,8 +11,7 @@ public class ReadInput {
 	public static int V; //Cars
 	public static int F; //Bonus points
 	
-	public static HashMap[] read(String[] args) throws IOException{
-		String inputPath = args[0];
+	public static HashMap[] read(String inputPath) throws IOException{
 		HashMap<String, Street> streetHash = new HashMap<String, Street>();
 		HashMap<Integer, Intersection> interHash = new HashMap<Integer, Intersection>();
 		HashMap<Integer, Car> carHash = new HashMap<Integer, Car>();
@@ -65,6 +64,7 @@ public class ReadInput {
 					}
 					Car tempCar = new Car(pathList);
 					carHash.put(lineNumber, tempCar);
+					streetHash.get(words[1]).carQueue.addLast(tempCar);
 				}
 				
 				

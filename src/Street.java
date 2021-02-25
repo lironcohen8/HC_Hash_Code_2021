@@ -1,3 +1,5 @@
+import java.util.ArrayDeque;
+import java.util.ArrayList;
 import java.util.List;
 
 public class Street {
@@ -6,7 +8,7 @@ public class Street {
 	private int Outcoming;
 	private int length;
 	private boolean greenLight;
-	private List<Car> carQueue;
+	public ArrayDeque<Car> carQueue = new ArrayDeque<Car>();
 	
 	public Street() {
 		
