@@ -52,8 +52,8 @@ public class ReadInput {
 						interHash.put(outcomingIntersection, new Intersection(outcomingIntersection));
 					} 
 						
-					Intersection tempIntersection2 = interHash.get(incomingIntersection);
-					tempIntersection.incomingStreet.add(tempStreet);
+					Intersection tempIntersection2 = interHash.get(outcomingIntersection);
+					tempIntersection2.incomingStreet.add(tempStreet);
 					
 				}
 				else {

@@ -11,7 +11,7 @@ public class Main {
 	private static HashMap<String, Street> streets;
 	private static HashMap<Integer, Intersection> intersections;
 	private static HashMap<Integer, Car> cars;
-	private static String path = "C:\\Users\\user\\HashCode2021\\resource\\f.txt";
+	private static String path = "C:\\Users\\user\\HashCode2021\\resource\\a.txt";
 	
 	public static void main(String[] args) throws IOException {
 		HashMap[] hashArray = ReadInput.read(path);
@@ -20,7 +20,7 @@ public class Main {
 		cars = hashArray[2];
 
 		int i=5;
-		File inputFile = new File("C:\\Users\\user\\HashCode2021\\resource\\output6.txt");
+		File inputFile = new File("C:\\Users\\user\\HashCode2021\\resource\\output.txt");
 		FileWriter fWriter = new FileWriter(inputFile);
 		BufferedWriter bufferedWriter = new BufferedWriter(fWriter);
 		
