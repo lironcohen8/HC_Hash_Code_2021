@@ -60,7 +60,11 @@ public class ReadInput {
 					Integer size = Integer.parseInt(words[0]);
 					Street[] pathList = new Street[size];
 					for (int i=0;i<size;i++) {
-						pathList[i] = streetHash.get(words[i+1]);
+						Street currStreet = streetHash.get(words[i+1]);
+						pathList[i] = currStreet;
+						currStreet.priorityValue++;
+						interHash.get(currStreet.OutcomingIntersection).priorityInt++;
+						
 					}
 					Car tempCar = new Car(pathList);
 					carHash.put(lineNumber, tempCar);
