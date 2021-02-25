@@ -1,19 +1,19 @@
 import java.util.List;
+import java.util.Set;
 
 public class Intersection {
 	
 	private int id;
-	private List<Street> incomingStr;
-	private List<Street> outcomingStr;
+	public Set<Street> incomingStreet;
+	public Set<Street> outcomingStreet;
 	
 	public Intersection() {
 		
 	}
 	
-	public Intersection(int id, List<Street> incoming, List<Street> outcoming) {
+	public Intersection(int id) {
 		this.id = id;
-		this.incomingStr = incoming;
-		this.outcomingStr = outcoming;
 	}
+	
 
 }
