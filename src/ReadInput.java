@@ -74,6 +74,9 @@ public class ReadInput {
 		
 		
 		bufferedReader.close();
+		
+		HashMap[] res = {streetHash, interHash, carHash};
+		return res;
 	}
 	
 	
