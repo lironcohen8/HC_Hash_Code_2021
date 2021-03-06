@@ -11,16 +11,17 @@ public class Main {
 	private static HashMap<String, Street> streets;
 	private static HashMap<Integer, Intersection> intersections;
 	private static HashMap<Integer, Car> cars;
-	private static String path = "C:\\Users\\user\\eclipse-workspace\\HashCode2021\\resource\\b.txt";
+	private static String path = "C:\\Users\\user\\eclipse-workspace\\HashCode2021\\resource\\";
 	
 	public static void main(String[] args) throws IOException {
-		HashMap[] hashArray = ReadInput.read(path);
+		char[] namesArray = {'a','b','c','d','e','f'};
+		for (char letter : namesArray) {
+		HashMap[] hashArray = ReadInput.read(path + letter + ".txt");
 		streets = hashArray[0];
 		intersections = hashArray[1];
 		cars = hashArray[2];
 
-		int i=5;
-		File outputFile = new File("C:\\Users\\user\\eclipse-workspace\\HashCode2021\\resource\\boutput.txt");
+		File outputFile = new File("C:\\Users\\user\\eclipse-workspace\\HashCode2021\\resource\\" + letter + "output.txt");
 		FileWriter fWriter = new FileWriter(outputFile);
 		BufferedWriter bufferedWriter = new BufferedWriter(fWriter);
 		
@@ -48,5 +49,5 @@ public class Main {
 		bufferedWriter.close();
 	}
 	
-
+	}
 }
