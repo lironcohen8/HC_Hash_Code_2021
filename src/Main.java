@@ -39,7 +39,8 @@ public class Main {
 				bufferedWriter.write(tempIntersection.getPositiveStreets()+ "\n");
 				for (Street street : tempIntersection.incomingStreet) {
 					if (street.priorityValue>0) {
-						bufferedWriter.write(street.name+ " " +(int)Math.ceil(street.priorityValue/tempIntersection.priorityInt) +"\n");
+						int factor = (int) Math.ceil((street.priorityValue/tempIntersection.priorityInt)*ReadInput.D);
+						bufferedWriter.write(street.name+ " " + factor +"\n");
 					}
 				}
 			}
