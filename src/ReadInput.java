@@ -66,6 +66,10 @@ public class ReadInput {
 						interHash.get(currStreet.OutcomingIntersection).priorityInt++;
 						
 					}
+					for (int i = 0; i <size-1 ; i++) {
+						pathList[i].outTotalLength += pathList[i+1].length;
+					}
+					pathList[0].startingAmount++;
 					Car tempCar = new Car(pathList);
 					carHash.put(lineNumber, tempCar);
 					streetHash.get(words[1]).carQueue.addLast(tempCar);

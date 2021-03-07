@@ -6,7 +6,9 @@ public class Street {
 	public String name;
 	public int IncomingIntersection;
 	public int OutcomingIntersection;
-	private int length;
+	public int length;
+	public int outTotalLength;
+	public int startingAmount;
 	private boolean greenLight;
 	public ArrayDeque<Car> carQueue = new ArrayDeque<Car>();
 	public int priorityValue;
