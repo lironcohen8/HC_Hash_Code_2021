@@ -41,7 +41,6 @@ public class Main {
 			if (tempIntersection.priorityInt!=0) {
 				bufferedWriter.write(intersection+ "\n");
 				bufferedWriter.write(tempIntersection.getPositiveStreets()+ "\n");
-//				for (Street street : tempIntersection.incomingStreet) {
 				for (Street street : tempIntersection.incomeOrder()) {
 					if (street.priorityValue>0) {
 						double lenRatio = (double) street.outTotalLength/totalLen;
