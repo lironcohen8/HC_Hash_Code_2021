@@ -36,7 +36,7 @@ public class Main {
 		for (Integer intersection : intersections.keySet()) {
 			Intersection tempIntersection = intersections.get(intersection);
 
-			int totalLen = tempIntersection.getTtoalOutreetsLength();
+			int totalLen = tempIntersection.getTotalOutstreetsLength();
 			int maxLen = tempIntersection.longestStreet();
 			if (tempIntersection.priorityInt!=0) {
 				bufferedWriter.write(intersection+ "\n");

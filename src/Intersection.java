@@ -27,7 +27,7 @@ public class Intersection {
         return counter;
     }
 
-    public int getTtoalOutreetsLength() {
+    public int getTotalOutstreetsLength() {
         int len = 0;
         for (Street s : this.incomingStreet) {
             len += s.outTotalLength;
