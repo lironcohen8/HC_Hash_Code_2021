@@ -75,7 +75,6 @@ public class ReadInput {
 					streetHash.get(words[1]).carQueue.addLast(tempCar);
 				}
 				
-				
 			}
 			lineNumber++;
 		}
