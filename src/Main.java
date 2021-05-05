@@ -1,7 +1,5 @@
-import java.io.BufferedReader;
 import java.io.BufferedWriter;
 import java.io.File;
-import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.util.*;
@@ -45,13 +43,13 @@ public class Main {
 					if (street.priorityValue>0) {
 						double lenRatio = (double) street.outTotalLength/totalLen;
 						double priorityRatio = (double)street.priorityValue/tempIntersection.priorityInt;
-						double periodRatio = (double) ReadInput.D/maxLen;
+						//double periodRatio = (double) ReadInput.D/maxLen;
 						int factor = (int) Math.ceil(( tempIntersection.getPositiveStreets() *  priorityRatio * lenRatio));
 						factor = factor < 1? 1: factor;
-//						int factor = (int) Math.ceil((tempIntersection.getPositiveStreets() *  priorityRatio));
-//						int factor = (int) Math.ceil((0.5 *  priorityRatio * lenRatio * periodRatio));
-//						int factor = (int) Math.ceil((priorityRatio * lenRatio
-//								* tempIntersection.getPositiveStreets() * 10));
+						/*int factor = (int) Math.ceil((tempIntersection.getPositiveStreets() *  priorityRatio));
+						int factor = (int) Math.ceil((0.5 *  priorityRatio * lenRatio * periodRatio));
+						int factor = (int) Math.ceil((priorityRatio * lenRatio
+								* tempIntersection.getPositiveStreets() * 10));*/
 						bufferedWriter.write(street.name+ " " + factor +"\n");
 					}
 				}
